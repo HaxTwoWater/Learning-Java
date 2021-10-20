@@ -1,0 +1,44 @@
+// Made by HaxTwoWater (NaturaSky on the website)
+// I did this code with the base of a practice on sololearn
+// but only the "hovercraft" idea is from the site
+// this code is made by myself
+
+import java.util.Scanner;
+
+public class Program
+{
+    public static void main(String[] args) {
+		
+        //this code will calculate if your in loss , profit or Broke Even and then tell you 
+        //how many you made or lost (you always made 10 hovercraft in a month) You sell 1 hovercraft for 
+        //3.000.000 and product 1 hovercraft for 2.000.000 and you have to pay 1.000.000 each month
+        //for insurance
+
+        
+        int hoversell = 3000000;
+        
+
+        Scanner sc = new Scanner(System.in);
+
+        int hoverAmount = sc.nextInt();
+        int totalSell = hoverAmount*hoversell;
+        int totalProd = 21000000;
+
+        int money = totalSell-totalProd;
+
+        if(hoverAmount >= 7){
+            if(hoverAmount == 7){
+                System.out.println("Broke Even");
+                System.out.println("You made 0 $");
+            }else{
+                System.out.println("Profit");
+                System.out.println("You made " + money + " $");
+            }
+        }else{
+            System.out.println("Loss");
+            System.out.println("You lost " + money + " $");
+        }
+
+
+	}
+}
