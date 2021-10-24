@@ -1,0 +1,52 @@
+import java.util.Scanner;
+//------- My code ------
+abstract class Shape {
+    int width;
+
+    public Shape(int y) {
+        this.width = y;
+
+    }
+
+    abstract void area();
+}
+//your code goes here
+class Circle extends Shape{
+
+    public Circle(int y) {
+        super(y);
+
+    }
+
+    @Override
+    void area() {
+        System.out.println(Math.PI*width*width);
+    }
+}
+
+class Square extends Shape{
+
+    public Square(int x) {
+        super(x);
+
+    }
+
+    @Override
+    void area() {
+
+        System.out.println(width*width);
+    }
+}
+// ------ Code from the Website ------
+public class Learning {
+    public static void main(String[ ] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+
+        Square a = new Square(x);
+        Circle b = new Circle(y);
+        a.area();
+        b.area();
+    }
+}
