@@ -10,7 +10,7 @@ abstract class Shape {
 
     abstract void area();
 }
-//your code goes here
+
 class Circle extends Shape{
 
     public Circle(int y) {
